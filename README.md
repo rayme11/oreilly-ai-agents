@@ -107,6 +107,8 @@ python3 -m jupyter notebook
 - **Using 3rd party agent frameworks**
 
 	- **[Intro to SmolAgents](notebooks/SmolAgents.ipynb)** - An introductory notebook for HuggingFace's SmolAgents
+
+	- **[Intro to Google ADK](notebooks/Google_ADK_Hello_World.ipynb)** - An introductory notebook for Google's Agent Development Kit with Google Search and custom tools
 	
 	- **[Intro to CrewAI](notebooks/CrewAI_Hello_World.ipynb)** - An introductory notebook for CrewAI
 

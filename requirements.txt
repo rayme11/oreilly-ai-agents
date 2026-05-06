@@ -13,4 +13,5 @@ datasets
 matplotlib
 openai-agents
 smolagents
+google-adk
 ddgs
