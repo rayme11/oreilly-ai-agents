@@ -23,10 +23,6 @@ jobs:
         with:
           fetch-depth: 0  # Full history for git diff
       
-      # Step 2: Install code analysis tools
-      - name: Install tools
-        run: |
-          pip install flake8 bandit
       # Step 2: Build the MCP server Docker image
       - name: Build MCP server image
         run: |
