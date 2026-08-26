@@ -23,12 +23,20 @@ jobs:
         with:
           fetch-depth: 0  # Full history for git diff
       
-      # Step 2: Build the MCP server Docker image
+      # Step 2: Install code analysis tools
+      - name: Install tools
+        run: |
+          pip install flake8 bandit
+
+      # Step 3: Build the MCP server Docker image
+      # The Dockerfile lives in mcp-code-review-bot/, not the repo root —
+      # without working-directory, CI fails with "no such file or directory".
       - name: Build MCP server image
+        working-directory: mcp-code-review-bot
         run: |
           docker build -t mcp-code-review .
-      
-      # Step 3: Run the code review
+
+      # Step 4: Run the code review
       - name: Run AI Code Review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
